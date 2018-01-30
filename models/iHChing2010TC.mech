@@ -29,7 +29,7 @@ Cone(0) = 0.5.*rand(1,Npop);
 Pzero' = 0.0004.*(1-Pzero) - 0.0004.*((@CaBuffer./0.002).^4).*Pzero;
 Pzero(0) = 0.5.*rand(1,Npop);
 % AES: change this
-OPENone' = 0.001.*(1-Cone-OPENone) - 0.001.*((Pzero)./0.01).*OPENone;
+OPENone' = 0.001.*(1-Cone-OPENone) - 0.001.*((1-Pzero)./0.01).*OPENone;
 OPENone(0) = 0.*rand(1,Npop);
 
 % Linker
